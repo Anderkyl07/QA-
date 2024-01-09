@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "c5170226-4300-42f5-b440-6fe6ae1f12ab",
+		"name": "CurlTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24408672"
+	},
+	"item": [
+		{
+			"name": "https://4sysops.com",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://4sysops.com",
+					"protocol": "https",
+					"host": [
+						"4sysops",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

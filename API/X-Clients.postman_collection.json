@@ -1,0 +1,1297 @@
+{
+	"info": {
+		"_postman_id": "6f1a37c1-e418-4cf0-aa20-328710c8c718",
+		"name": "X-Clients",
+		"description": "<h2>Сервис записи на прием к профильным специалистам.</h2><h3><a href=\"/docs-json\">Документация в формате JSON</a></h3>",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24408672"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "Авторизация",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"userToken\": \"<string>\",\n  \"role\": \"admin\",\n  \"displayName\": \"<string>\",\n  \"login\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Получить конкретную компанию",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"isActive\": true,\n  \"description\": \"<string>\"\n}"
+								},
+								{
+									"name": "Компания не найдена",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/company/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Изменить информацию по комании",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "(Required) Авторизационный токен",
+										"key": "x-client-token",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/company/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>"
+										}
+									]
+								},
+								"description": "<font color=\"#eb7f99\" size=\"4\">admin only</font>"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Accepted",
+									"code": 202,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"isActive\": true,\n  \"description\": \"<string>\"\n}"
+								},
+								{
+									"name": "Компания не найдена",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Удалить компанию",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/delete/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>"
+												}
+											]
+										},
+										"description": "<font color=\"#eb7f99\" size=\"4\">admin only</font>"
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Авторизационный токен",
+														"key": "x-client-token",
+														"value": "<string>"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/company/delete/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"company",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"isActive\": true,\n  \"description\": \"<string>\"\n}"
+										},
+										{
+											"name": "Компания не найдена",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Авторизационный токен",
+														"key": "x-client-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/company/delete/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"company",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "status",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "(Де)активировать команию",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"isActive\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/status/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"status",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>"
+												}
+											]
+										},
+										"description": "<font color=\"#eb7f99\" size=\"4\">admin only</font><br />true = комания активна, false = комания неактивна"
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) Авторизационный токен",
+														"key": "x-client-token",
+														"value": "<string>"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"isActive\": true\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/company/status/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"company",
+														"status",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"isActive\": true,\n  \"description\": \"<string>\"\n}"
+										},
+										{
+											"name": "Компания не найдена",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) Авторизационный токен",
+														"key": "x-client-token",
+														"value": "<string>"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"isActive\": true\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/company/status/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"company",
+														"status",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Получить список компаний",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/company?active=<boolean>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "<boolean>",
+									"description": "Показать только активные"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company?active=<boolean>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "<boolean>",
+											"description": "Показать только активные"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<number>\",\n    \"name\": \"<string>\",\n    \"isActive\": true,\n    \"description\": \"<string>\"\n  },\n  {\n    \"id\": \"<number>\",\n    \"name\": \"<string>\",\n    \"isActive\": true,\n    \"description\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Добавить новую компанию",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Авторизационный токен",
+								"key": "x-client-token",
+								"value": "<string>"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/company",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company"
+							]
+						},
+						"description": "<font color=\"#eb7f99\" size=\"4\">admin only</font>"
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) Авторизационный токен",
+										"key": "x-client-token",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/company",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<number>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Получить сотрудника по id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employee/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<number>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"companyId\": \"<number>\",\n  \"isActive\": true,\n  \"middleName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"birthdate\": \"<dateTime>\"\n}"
+								},
+								{
+									"name": "Сотрудник не найден",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/employee/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Изменить информацию о сотруднике",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "(Required) Авторизационный токен",
+										"key": "x-client-token",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"isActive\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<number>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"companyId\": \"<number>\",\n  \"isActive\": true,\n  \"middleName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"birthdate\": \"<dateTime>\"\n}"
+								},
+								{
+									"name": "Сотрудник не найден",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) Авторизационный токен",
+												"key": "x-client-token",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"isActive\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Получить список сотрудников для компании",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/employee?company=<number>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "<number>",
+									"description": "(Required) id компании"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee?company=<number>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee"
+									],
+									"query": [
+										{
+											"key": "company",
+											"value": "<number>",
+											"description": "(Required) id компании"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<number>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"companyId\": \"<number>\",\n    \"isActive\": true,\n    \"middleName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"url\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"birthdate\": \"<dateTime>\"\n  },\n  {\n    \"id\": \"<number>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"companyId\": \"<number>\",\n    \"isActive\": true,\n    \"middleName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"url\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"birthdate\": \"<dateTime>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Добавить нового сотрудника",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Авторизационный токен",
+								"key": "x-client-token",
+								"value": "<string>"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<number>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"companyId\": \"<number>\",\n  \"isActive\": true,\n  \"middleName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"birthdate\": \"<dateTime>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) Авторизационный токен",
+										"key": "x-client-token",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<number>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"companyId\": \"<number>\",\n  \"isActive\": true,\n  \"middleName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"url\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"birthdate\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<number>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "test-data",
+			"item": [
+				{
+					"name": "Пересоздать список компаний и пользователей. Очистить талицу, добавить 5 компаний, 15 пользователей",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/test-data",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"test-data"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/test-data",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test-data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
