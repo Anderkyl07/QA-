@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "a796e7ea-e78a-4324-bfe2-e32ac211fdb3",
+		"name": "Яндекс поисковик",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38449543",
+		"_collection_link": "https://www.postman.com/rzhd-expert/workspace/rzhd-expert-workspace/collection/38449543-a796e7ea-e78a-4324-bfe2-e32ac211fdb3?action=share&source=collection_link&creator=38449543"
+	},
+	"item": [
+		{
+			"name": "ввод в поисковик",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "device-memory",
+						"value": "8"
+					},
+					{
+						"key": "downlink",
+						"value": "10"
+					},
+					{
+						"key": "dpr",
+						"value": "1"
+					},
+					{
+						"key": "ect",
+						"value": "4g"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://ya.ru/"
+					},
+					{
+						"key": "rtt",
+						"value": "100"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+					},
+					{
+						"key": "sec-ch-ua-arch",
+						"value": "\"x86\""
+					},
+					{
+						"key": "sec-ch-ua-bitness",
+						"value": "\"64\""
+					},
+					{
+						"key": "sec-ch-ua-full-version",
+						"value": "\"135.0.7049.96\""
+					},
+					{
+						"key": "sec-ch-ua-full-version-list",
+						"value": "\"Google Chrome\";v=\"135.0.7049.96\", \"Not-A.Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"135.0.7049.96\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-model",
+						"value": "\"\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-ch-ua-platform-version",
+						"value": "\"15.0.0\""
+					},
+					{
+						"key": "sec-ch-ua-wow64",
+						"value": "?0"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "viewport-width",
+						"value": "1159"
+					},
+					{
+						"key": "Cookie",
+						"value": "is_gdpr=0; is_gdpr_b=COCMJhDQuwIoAg==; yashr=9901460791745042177; spravka=dD0xNzEzNTA2MTc3O2k9MjAwMTo0ODYwOjc6NjI3OjpmZjtEPUY5MzYxMjZCNDY1RTc4QjRBQzEyMTFCM0JFQkZCMUIyMDVBN0Y1RTg1RDQ5RkI5RTBGRTFGMTcwRTU1ODMxNjc4Qzc5OUU2N0JENjc4Q0I4O3U9MTcxMzUwNjE3NzUzOTgzOTExODtoPWIxYTY0MmNiZTJkNDAzMDFiZmUzMDBjMTdkYWIwNTY2; yandex_csyr=1745042177; receive-cookie-deprecation=1; Session_id=noauth:1745042178; sessar=1.1201.CiBe5ParsjWvE58WVNuPM-qpCHeJGI5NDOUhOKDUu1Y8Dw.JQbW5heMQXM6lGoKnyinZFuBiwotUIUI8a-KYmu8MEI; yandex_login=; ys=c_chck.2530689531; i=K0QbJ5+9lyDvPL1ksq4q2Gygdr1xTdUFvbgaAbWT+rGMDELTyIiuUcuEAny8iVYxmd7f0m/bg94vUNcuH7hTfsd2KP4=; yandexuid=3952329071744868883; yandex_gid=11256; mda2_beacon=1745042178168; gdpr=0; _ym_uid=1745042170256463149; my=YwA=; bltsr=1; _ym_isad=1; yp=1747465100.ygu.1#1760810191.szm.1:2560x1440:1645x1271#1747720609.csc.1; bh=EkAiR29vZ2xlIENocm9tZSI7dj0iMTM1IiwgIk5vdC1BLkJyYW5kIjt2PSI4IiwgIkNocm9taXVtIjt2PSIxMzUiGgUieDg2IiIPIjEzNS4wLjcwNDkuOTYiKgI/MDICIiI6CSJXaW5kb3dzIkIIIjE1LjAuMCJKBCI2NCJSWiJHb29nbGUgQ2hyb21lIjt2PSIxMzUuMC43MDQ5Ljk2IiwgIk5vdC1BLkJyYW5kIjt2PSI4LjAuMC4wIiwgIkNocm9taXVtIjt2PSIxMzUuMC43MDQ5Ljk2IloCPzBg+6ONwAZqHtzK4f8IktihsQOfz+HqA/v68OcN6//99g/E08+HCA==; _yasc=OBhn+zdWLmO+NXyll4bgQ2M2Vt0Z5EzNZNtZUBJu9WK8ipbZF8KF7OvDBVtjdyJ2LQHnS8jTrOqQ"
+					}
+				],
+				"url": {
+					"raw": "https://ya.ru/suggest/suggest-ya.cgi?srv=morda_ru_desktop&wiz=TrWth&uil=ru&fact=1&v=4&icon=1&lr=11256&hl=1&bemjson=0&history=1&html=1&platform=desktop&rich_nav=1&show_experiment=224&verified_nav=1&rich_phone=1&use_favicon=1&nav_favicon=1&nav_text=1&mt_wizard=1&suggest_entity_desktop=1&entity_enrichment=1&entity_alignment_mode=bottom&sn=7&maybe_ads=1&safeclick=1&skip_clickdaemon_host=1&yu=3952329071744868883&entity_max_count=2&svg=1&part=tt%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5&pos=41&suggest_reqid=395232907174486888321888689345928&hs=0",
+					"protocol": "https",
+					"host": [
+						"ya",
+						"ru"
+					],
+					"path": [
+						"suggest",
+						"suggest-ya.cgi"
+					],
+					"query": [
+						{
+							"key": "srv",
+							"value": "morda_ru_desktop"
+						},
+						{
+							"key": "wiz",
+							"value": "TrWth"
+						},
+						{
+							"key": "uil",
+							"value": "ru"
+						},
+						{
+							"key": "fact",
+							"value": "1"
+						},
+						{
+							"key": "v",
+							"value": "4"
+						},
+						{
+							"key": "icon",
+							"value": "1"
+						},
+						{
+							"key": "lr",
+							"value": "11256"
+						},
+						{
+							"key": "hl",
+							"value": "1"
+						},
+						{
+							"key": "bemjson",
+							"value": "0"
+						},
+						{
+							"key": "history",
+							"value": "1"
+						},
+						{
+							"key": "html",
+							"value": "1"
+						},
+						{
+							"key": "platform",
+							"value": "desktop"
+						},
+						{
+							"key": "rich_nav",
+							"value": "1"
+						},
+						{
+							"key": "show_experiment",
+							"value": "224"
+						},
+						{
+							"key": "verified_nav",
+							"value": "1"
+						},
+						{
+							"key": "rich_phone",
+							"value": "1"
+						},
+						{
+							"key": "use_favicon",
+							"value": "1"
+						},
+						{
+							"key": "nav_favicon",
+							"value": "1"
+						},
+						{
+							"key": "nav_text",
+							"value": "1"
+						},
+						{
+							"key": "mt_wizard",
+							"value": "1"
+						},
+						{
+							"key": "suggest_entity_desktop",
+							"value": "1"
+						},
+						{
+							"key": "entity_enrichment",
+							"value": "1"
+						},
+						{
+							"key": "entity_alignment_mode",
+							"value": "bottom"
+						},
+						{
+							"key": "sn",
+							"value": "7"
+						},
+						{
+							"key": "maybe_ads",
+							"value": "1"
+						},
+						{
+							"key": "safeclick",
+							"value": "1"
+						},
+						{
+							"key": "skip_clickdaemon_host",
+							"value": "1"
+						},
+						{
+							"key": "yu",
+							"value": "3952329071744868883"
+						},
+						{
+							"key": "entity_max_count",
+							"value": "2"
+						},
+						{
+							"key": "svg",
+							"value": "1"
+						},
+						{
+							"key": "part",
+							"value": "tt%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5"
+						},
+						{
+							"key": "pos",
+							"value": "41"
+						},
+						{
+							"key": "suggest_reqid",
+							"value": "395232907174486888321888689345928"
+						},
+						{
+							"key": "hs",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl 'https://ya.ru/suggest/suggest-ya.cgi?srv=morda_ru_desktop&wiz=TrWth&uil=ru&fact=1&v=4&icon=1&lr=11256&hl=1&bemjson=0&history=1&html=1&platform=desktop&rich_nav=1&show_experiment=224&verified_nav=1&rich_phone=1&use_favicon=1&nav_favicon=1&nav_text=1&mt_wizard=1&suggest_entity_desktop=1&entity_enrichment=1&entity_alignment_mode=bottom&sn=7&maybe_ads=1&safeclick=1&skip_clickdaemon_host=1&yu=3952329071744868883&entity_max_count=2&svg=1&part=tt%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5%D0%B5&pos=41&suggest_reqid=395232907174486888321888689345928&hs=0' \\\r\n  -H 'accept: */*' \\\r\n  -H 'accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7' \\\r\n  -b 'is_gdpr=0; is_gdpr_b=COCMJhDQuwIoAg==; yashr=9901460791745042177; spravka=dD0xNzEzNTA2MTc3O2k9MjAwMTo0ODYwOjc6NjI3OjpmZjtEPUY5MzYxMjZCNDY1RTc4QjRBQzEyMTFCM0JFQkZCMUIyMDVBN0Y1RTg1RDQ5RkI5RTBGRTFGMTcwRTU1ODMxNjc4Qzc5OUU2N0JENjc4Q0I4O3U9MTcxMzUwNjE3NzUzOTgzOTExODtoPWIxYTY0MmNiZTJkNDAzMDFiZmUzMDBjMTdkYWIwNTY2; yandex_csyr=1745042177; receive-cookie-deprecation=1; Session_id=noauth:1745042178; sessar=1.1201.CiBe5ParsjWvE58WVNuPM-qpCHeJGI5NDOUhOKDUu1Y8Dw.JQbW5heMQXM6lGoKnyinZFuBiwotUIUI8a-KYmu8MEI; yandex_login=; ys=c_chck.2530689531; i=K0QbJ5+9lyDvPL1ksq4q2Gygdr1xTdUFvbgaAbWT+rGMDELTyIiuUcuEAny8iVYxmd7f0m/bg94vUNcuH7hTfsd2KP4=; yandexuid=3952329071744868883; yandex_gid=11256; mda2_beacon=1745042178168; gdpr=0; _ym_uid=1745042170256463149; my=YwA=; bltsr=1; _ym_isad=1; yp=1747465100.ygu.1#1760810191.szm.1:2560x1440:1645x1271#1747720609.csc.1; bh=EkAiR29vZ2xlIENocm9tZSI7dj0iMTM1IiwgIk5vdC1BLkJyYW5kIjt2PSI4IiwgIkNocm9taXVtIjt2PSIxMzUiGgUieDg2IiIPIjEzNS4wLjcwNDkuOTYiKgI/MDICIiI6CSJXaW5kb3dzIkIIIjE1LjAuMCJKBCI2NCJSWiJHb29nbGUgQ2hyb21lIjt2PSIxMzUuMC43MDQ5Ljk2IiwgIk5vdC1BLkJyYW5kIjt2PSI4LjAuMC4wIiwgIkNocm9taXVtIjt2PSIxMzUuMC43MDQ5Ljk2IloCPzBg+6ONwAZqHtzK4f8IktihsQOfz+HqA/v68OcN6//99g/E08+HCA==; _yasc=OBhn+zdWLmO+NXyll4bgQ2M2Vt0Z5EzNZNtZUBJu9WK8ipbZF8KF7OvDBVtjdyJ2LQHnS8jTrOqQ' \\\r\n  -H 'device-memory: 8' \\\r\n  -H 'downlink: 10' \\\r\n  -H 'dpr: 1' \\\r\n  -H 'ect: 4g' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://ya.ru/' \\\r\n  -H 'rtt: 100' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"' \\\r\n  -H 'sec-ch-ua-arch: \"x86\"' \\\r\n  -H 'sec-ch-ua-bitness: \"64\"' \\\r\n  -H 'sec-ch-ua-full-version: \"135.0.7049.96\"' \\\r\n  -H 'sec-ch-ua-full-version-list: \"Google Chrome\";v=\"135.0.7049.96\", \"Not-A.Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"135.0.7049.96\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-model: \"\"' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-ch-ua-platform-version: \"15.0.0\"' \\\r\n  -H 'sec-ch-ua-wow64: ?0' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36' \\\r\n  -H 'viewport-width: 1159'"
+			},
+			"response": []
+		},
+		{
+			"name": "поиск введенных значений ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "ya.ru",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br, zstd",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "is_gdpr=0; is_gdpr_b=COCMJhDQuwIoAg==; yashr=9901460791745042177; spravka=dD0xNzEzNTA2MTc3O2k9MjAwMTo0ODYwOjc6NjI3OjpmZjtEPUY5MzYxMjZCNDY1RTc4QjRBQzEyMTFCM0JFQkZCMUIyMDVBN0Y1RTg1RDQ5RkI5RTBGRTFGMTcwRTU1ODMxNjc4Qzc5OUU2N0JENjc4Q0I4O3U9MTcxMzUwNjE3NzUzOTgzOTExODtoPWIxYTY0MmNiZTJkNDAzMDFiZmUzMDBjMTdkYWIwNTY2; yandex_csyr=1745042177; receive-cookie-deprecation=1; yandex_login=; i=K0QbJ5+9lyDvPL1ksq4q2Gygdr1xTdUFvbgaAbWT+rGMDELTyIiuUcuEAny8iVYxmd7f0m/bg94vUNcuH7hTfsd2KP4=; yandexuid=3952329071744868883; yandex_gid=11256; mda2_beacon=1745042178168; gdpr=0; _ym_uid=1745042170256463149; my=YwA=; bltsr=1; _ym_isad=1; font_loaded=YSv1; _yasc=sF9lHi4RTEgeDY//BhI1fklAY5r2ETQ7N7l4WT2isbaLnx+Ffem43YlTVG56EKzYKA+j4GRB94zWJdE=; bh=EkAiR29vZ2xlIENocm9tZSI7dj0iMTM1IiwgIk5vdC1BLkJyYW5kIjt2PSI4IiwgIkNocm9taXVtIjt2PSIxMzUiGgUieDg2IiIPIjEzNS4wLjcwNDkuOTYiKgI/MDICIiI6CSJXaW5kb3dzIkIIIjE1LjAuMCJKBCI2NCJSWiJHb29nbGUgQ2hyb21lIjt2PSIxMzUuMC43MDQ5Ljk2IiwgIk5vdC1BLkJyYW5kIjt2PSI4LjAuMC4wIiwgIkNocm9taXVtIjt2PSIxMzUuMC43MDQ5Ljk2IloCPzBg5byNwAZqHtzK4f8IktihsQOfz+HqA/v68OcN6//99g/E08+HCA==; ys=wprid.1745051436251302-18304889456851436812-balancer-l7leveler-kubr-yp-vla-263-BAL#c_chck.2530689531; yp=1747727093.hdrc.0#1760819429.szm.1:2560x1440:1144x1271:15#1747465100.ygu.1#1776587428.swntab.0#2060411427.pcs.1#1750232707.atds.1#1745912693.dlp.3#1747729932.csc.1",
+						"type": "text"
+					},
+					{
+						"key": "device-memory",
+						"value": "8",
+						"type": "text"
+					},
+					{
+						"key": "downlink",
+						"value": "3.3",
+						"type": "text"
+					},
+					{
+						"key": "dpr",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "ect",
+						"value": "4g",
+						"type": "text"
+					},
+					{
+						"key": "priority",
+						"value": "u=0, i",
+						"type": "text"
+					},
+					{
+						"key": "referer",
+						"value": "https://ya.ru/",
+						"type": "text"
+					},
+					{
+						"key": "rtt",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-arch",
+						"value": "\"x86\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-bitness",
+						"value": "\"64\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-full-version",
+						"value": "\"135.0.7049.96\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-full-version-list",
+						"value": "\"Google Chrome\";v=\"135.0.7049.96\", \"Not-A.Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"135.0.7049.96\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-model",
+						"value": "\"\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-platform-version",
+						"value": "\"15.0.0\"",
+						"type": "text"
+					},
+					{
+						"key": "sec-ch-ua-wow64",
+						"value": "?0",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1",
+						"type": "text"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "viewport-width",
+						"value": "1159",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ya.ru/search/?text=%D0%B0%D1%83%D0%B4%D0%B8%D0%BE+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&lr=11256&msid=1745051520395482-14286616110251019586-balancer-l7leveler-kubr-yp-vla-263-BAL&search_source=yaru_desktop_common&search_domain=yaru&suggest_reqid=395232907174486888315110642090430&src=suggest_Pers\n",
+					"protocol": "https",
+					"host": [
+						"ya",
+						"ru"
+					],
+					"path": [
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "%D0%B0%D1%83%D0%B4%D0%B8%D0%BE+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0"
+						},
+						{
+							"key": "lr",
+							"value": "11256"
+						},
+						{
+							"key": "msid",
+							"value": "1745051520395482-14286616110251019586-balancer-l7leveler-kubr-yp-vla-263-BAL"
+						},
+						{
+							"key": "search_source",
+							"value": "yaru_desktop_common"
+						},
+						{
+							"key": "search_domain",
+							"value": "yaru"
+						},
+						{
+							"key": "suggest_reqid",
+							"value": "395232907174486888315110642090430"
+						},
+						{
+							"key": "src",
+							"value": "suggest_Pers\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
