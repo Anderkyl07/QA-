@@ -1,0 +1,79 @@
+{
+    "Humam": [
+        {
+            "name": "bob",
+            "age": 30,
+            "gender": "man",
+            "married": false,
+            "place": [
+                {
+                    "city": "Мщсква",
+                    "region": "Московский",
+                    "Haus": "11",
+                    "quarter": 100,
+                    "streat": "столетняя"
+                }
+            ]
+        },
+        {
+            "name": "Bil",
+            "age": 29,
+            "gender": "man",
+            "married": false,
+            "place": [
+                {
+                    "city": "Нью-Йорк",
+                    "region": "Нью-Йорк",
+                    "Haus": "34",
+                    "quarter": "test",
+                    "streat": "test"
+                }
+            ]
+        },
+        {
+            "name": "Jon",
+            "age": 31,
+            "gender": "man",
+            "married": false,
+            "place": [
+                {
+                    "city": "test",
+                    "region": "test",
+                    "Haus": "test",
+                    "quarter": "test",
+                    "streat": "test"
+                }
+            ]
+        },
+        {
+            "name": "Юра",
+            "age": 31,
+            "gender": "man",
+            "married": true,
+            "place": [
+                {
+                    "city": "test",
+                    "region": "test",
+                    "Haus": "test",
+                    "quarter": "test",
+                    "streat": "test"
+                }
+            ]
+        },
+        {
+            "name": "Дима",
+            "age": "test",
+            "gender": "man",
+            "married": true,
+            "place": [
+                {
+                    "city": "test",
+                    "region": "Скрыто",
+                    "Haus": "Streat",
+                    "quarter": "Streat",
+                    "streat": "Улица"
+                }
+            ]
+        }
+    ]
+}
